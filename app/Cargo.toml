@@ -1,0 +1,15 @@
+[package]
+name = "nxp-hello-world"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.3"
+pac = {path = "../pac"}
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"

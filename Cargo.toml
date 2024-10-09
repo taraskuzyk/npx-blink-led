@@ -1,13 +1,6 @@
-[package]
-name = "nxp-hello-world"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-cortex-m-rt = "0.7.3"
-
-[profile.dev]
-panic = "abort"
-
-[profile.release]
-panic = "abort"
+[workspace]
+resolver = "2"
+members = [
+	"app",
+	"pac",
+]
