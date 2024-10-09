@@ -3,7 +3,6 @@
 
 use core::panic::PanicInfo;
 use cortex_m_rt::entry;
-
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
     loop {}
@@ -12,5 +11,6 @@ fn panic(_info: &PanicInfo) -> ! {
 #[entry]
 
 fn main() -> ! {
+    let mut peripherals = pac::Peripherals::take().unwrap();
     loop {}
 }
